@@ -3,8 +3,12 @@
 $primary-color: #0046d1;
 $white-color: #fff;
 $white-color-dd: #c9c9c9;
-$white-color-ddd: #a4a4a4;
-$light-black: #474747;
+$white-color-ddd: #5d5d5d;
+$light-black: #1b1b1b;
+
+.mt2 {
+    margin-top: 0.2rem;
+}
 
 .mt4 {
     margin-top: 0.4rem;
@@ -14,10 +18,87 @@ $light-black: #474747;
     margin-top: 0.8rem;
 }
 
+.ml2 {
+    margin-left: 0.2rem;
+}
+
+.ml4 {
+    margin-left: 0.4rem;
+}
+
+.mr4 {
+    margin-right: 0.4rem;
+}
+
+.mr8 {
+    margin-right: 0.8rem;
+}
+
+.background_texture {
+    background: rgba(0, 255, 255, 0.062);
+    background: url("../images/redzy/bg-texture.png") #F8fff0 no-repeat center bottom;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.bottom_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0.2rem;
+    background: #f8f8f8;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 750px;
+    box-shadow: 0 0 0.6rem 0 #00000035;
+
+    .bottom_nav_childs {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 2.6rem;
+            cursor: pointer;
+        }
+
+        .bottom_nav_logo {
+            height: 8rem;
+            width: 8rem;
+            background: $white-color;
+            border-radius: 100%;
+            box-shadow: 0 0 1rem 0 #00000035;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -3.8rem;
+
+            img {
+                height: auto;
+                width: 90%;
+            }
+        }
+    }
+}
+
 .note {
     font-size: 1.2rem;
     text-align: justify;
     margin-top: 1rem;
+}
+
+.copy-btn {
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: $primary-color;
+}
+
+.mobile-section-padding {
+    padding: 2rem 2rem !important;
 }
 
 .global-btn {
@@ -47,6 +128,7 @@ $light-black: #474747;
     form {
         .mobile-form-group {
             position: relative;
+
             i {
                 position: absolute;
                 top: 1.4rem;
@@ -56,6 +138,7 @@ $light-black: #474747;
                 color: $primary-color;
                 opacity: 0.8;
             }
+
             input {
                 width: 100%;
                 margin-bottom: 2rem;
@@ -100,6 +183,7 @@ $light-black: #474747;
         width: 750px;
         height: 100vh;
         overflow-y: scroll;
+        position: relative;
 
         &::-webkit-scrollbar {
             width: 4px;
@@ -216,5 +300,353 @@ $light-black: #474747;
                 opacity: 1;
             }
         }
+    }
+}
+
+.section-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem;
+
+    .childs {
+        &:first-child {
+            i {
+                font-size: 2rem;
+                color: $primary-color;
+            }
+        }
+
+        &:nth-child(2) {
+            h3 {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+
+        &:last-child {
+            .logout-btn {
+                height: 3.3rem;
+                width: 3.3rem;
+                background: $primary-color;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                i {
+                    color: $white-color;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.user-profile-section {
+    padding: 3rem 0;
+
+    .user-profile-details {
+        padding: 3rem 2rem;
+        background: url("../images/redzy/bg_text.png");
+        background-repeat: no-repeat;
+        box-shadow: 0 0.2rem 0.5rem 0 #d3d3d3a7;
+        border-radius: 2rem;
+        margin-top: 4rem;
+        background-size: 100% 100%;
+
+        .user-profile-details-parent {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .user-profile-details-childs {
+                &:first-child {
+                    flex: 1;
+
+                    img {
+                        height: auto;
+                        width: 8rem;
+                    }
+                }
+
+                &:last-child {
+                    flex: 3;
+                }
+
+            }
+
+            .user-profile-inner-details {
+                display: flex;
+
+                .user-profile-inner-details-childs {
+                    flex: 1;
+                }
+            }
+        }
+
+        .profile-line-break {
+            height: 2px;
+            width: 100%;
+            background: $primary-color;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .user-account-balance {
+            h3 {
+                font-weight: 400;
+                color: $white-color-ddd;
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-weight: 600;
+                color: #4e4e4e;
+                font-size: 2.4rem;
+            }
+        }
+
+    }
+
+    .user-profile-subnav {
+
+        margin-bottom: 10rem;
+
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid $light-black;
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+
+                h2 {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: $light-black;
+                }
+
+                i {
+                    font-size: 1.2rem;
+                    color: $white-color-ddd;
+                }
+            }
+        }
+    }
+}
+
+.sub-heading {
+    font-weight: 400;
+    color: $white-color-ddd;
+    font-size: 1.6rem;
+}
+
+.heading {
+    font-weight: 400;
+    color: $light-black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.heading-lg {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 3rem 0;
+}
+
+.heading-md {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.user-journey-section {
+    .journey-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 4rem 0;
+
+        .journey-wrapper-childs {
+            &:first-child {
+                margin-right: 1rem;
+
+                img {
+                    height: auto;
+                    width: 8rem;
+                }
+            }
+
+            &:last-child {
+                h2 {
+                    color: $white-color-ddd;
+
+                }
+            }
+        }
+    }
+
+    .journey-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .earning-plan {
+            background: $white-color;
+            padding: 2rem;
+            border-radius: 1rem;
+            height: 100%;
+
+            h1 {
+                font-size: 1.6rem;
+                font-weight: 600;
+
+                i {
+                    background-color: #eaeaea;
+                    padding: 0.6rem;
+                    font-size: 1rem;
+                    border-radius: 0.4rem;
+                }
+            }
+        }
+
+        .user-journey-progress-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+
+            .progress-circle-wrapper {
+                height: 13rem;
+                width: 13rem;
+                background: conic-gradient(from 270deg, rgb(0, 183, 18) 100deg, rgb(218, 218, 218) 0deg);
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .progress-circle-inner-wrapper {
+                    background: $white-color;
+                    border-radius: 100%;
+                    height: 9rem;
+                    width: 9rem;
+                    display: flex;
+                    justify-content: center;
+
+                    h3 {
+                        margin-top: 2rem;
+                        font-size: 1.6rem;
+                        color: $white-color-ddd;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+        }
+
+        .progress-info {
+            background-color: $white-color;
+            margin-top: -6.5rem;
+            position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1.4rem;
+
+            h3 {
+                font-size: 1.6rem;
+                color: $white-color-ddd;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: $white-color-ddd;
+                font-weight: 400;
+            }
+        }
+
+        .journey-info-childs {
+            flex: 1;
+            text-align: center;
+
+            .journey-info-inner-childs {
+                &:first-child {
+                    background: $white-color;
+                    padding: 2rem;
+                    border-radius: 1rem;
+
+                    h3 {
+                        i {
+                            background-color: #eaeaea;
+                            padding: 0.6rem;
+                            font-size: 1rem;
+                            border-radius: 0.4rem;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    display: flex;
+                    gap: 0.8rem;
+
+                    .journey-info-inner-childs-alt {
+                        border-radius: 1rem;
+                        background: $white-color;
+                        flex: 1;
+                        margin-top: 0.8rem;
+                        padding: 1.8rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .journey-history-wrapper {
+        ul {
+            li {
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: $white-color;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 0.2rem 0.3rem 0 #1b1b1b2a;
+                margin-bottom: 1.5rem;
+
+                .journey-history-list {
+                    margin-right: 0.7rem;
+
+                    img {
+                        height: 3.4rem;
+                        width: 3.4rem;
+                        border: 3px solid #d9d9d9;
+                        border-radius: 50%;
+                    }
+                }
+
+                .journey-history-list-title {
+                    flex: 1;
+
+                    p {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .journey-history-list-amount {
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .start-journey-btn {
+        margin-top: 4rem;
+        padding-bottom: 10rem;
     }
 }

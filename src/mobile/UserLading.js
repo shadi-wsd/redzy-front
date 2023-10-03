@@ -1,6 +1,7 @@
 import "../assets/styles/mobile.scss";
 import { Route, Routes } from "react-router-dom";
-import WelcomePage from "./userAuth/WelcomePage"
+import UserProfile from "./mobilePages/UserProfile";
+import UserJourney from "./mobilePages/UserJourney";
 
 const UserLanding = () => {
     return (
@@ -8,7 +9,8 @@ const UserLanding = () => {
             <section className="app-main-section">
                 <div className="app-inner-view">
                     <Routes>
-                        <Route path="/" element={<WelcomePage />} exact />
+                        <Route path="/userProfile" element={<UserProfile />} exact />
+                        <Route path="/userJourney" element={<UserJourney />} exact />
                     </Routes>
                 </div>
             </section>
