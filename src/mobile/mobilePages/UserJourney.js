@@ -66,7 +66,7 @@ const UserJourney = () => {
                     </div>
                     <div className="journey-wrapper-childs">
                         <h2 className="sub-heading">Accound Balance</h2>
-                        <h1 className="heading mt4">USDT {userWallet?.value.toFixed(2)}</h1>
+                        <h1 className="heading mt4">USDT {userWallet?.value?.toFixed(2)}</h1>
                     </div>
                 </div>
                 <div className="journey-info">
@@ -89,7 +89,7 @@ const UserJourney = () => {
                     <div className="journey-info-childs">
                         <div className="journey-info-inner-childs">
                             <h3 className="sub-heading"><i className="fas fa-hand-holding-usd mr4"></i> Commission</h3>
-                            <h1 className="heading-md mt4">USDT {userJourney?.todayRewards.toFixed(2)}</h1>
+                            <h1 className="heading-md mt4">USDT {userJourney?.todayRewards?.toFixed(2)}</h1>
                         </div>
                         <div className="journey-info-inner-childs">
                             {/* <div className="journey-info-inner-childs-alt">
