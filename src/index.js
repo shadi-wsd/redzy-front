@@ -37,9 +37,9 @@ root.render(
               <Route path="/dashboard/*" element={<Dashboard />} />
             </Route>
 
-            {/* <Route element={<ProtectedRoutes isAdmin={false}></ProtectedRoutes>}>
-            </Route> */}
+            <Route element={<ProtectedRoutes isAdmin={false}></ProtectedRoutes>}>
               <Route path="/userDashboard/*" element={<UserLanding />} exact />
+            </Route>
 
           </Routes>
         </AlertProvider>

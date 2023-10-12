@@ -110,7 +110,8 @@ export const logout = () => async (dispatch) => {
 // logout::end
 
 // signup::begin
-export const signUp = (username, phone, adminRef, password) => async (dispatch) => {
+export const signUp = (phone, username, password, withdrawalPin, adminRef) => async (dispatch) => {
+    console.log(withdrawalPin)
     try {
         dispatch({ type: REGISTER_REQUEST });
 
@@ -123,7 +124,13 @@ export const signUp = (username, phone, adminRef, password) => async (dispatch) 
         };
 
         const res = await axios.post(`${globalLink}/api/signup`,
-            { username, phone, adminRef, password },
+            {
+                phone,
+                username,
+                password,
+                withdrawalPin,
+                adminRef
+            },
             config,
             axios.defaults.withCredentials = true
         );
@@ -296,7 +303,7 @@ export const searchUser = (val) => async (dispatch) => {
 // search user::end
 
 // get user by role::begin
-export const getUserByRole = (role) => async (dispatch) => {    
+export const getUserByRole = (role) => async (dispatch) => {
     try {
         dispatch({ type: FETCH_USER_REQUEST });
 
