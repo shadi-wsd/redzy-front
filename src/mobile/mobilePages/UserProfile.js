@@ -47,7 +47,7 @@ const UserProfile = () => {
                                 </div>
                                 <div className="user-profile-inner-details-childs">
                                     <h2 className="sub-heading">Commission</h2>
-                                    <p className="heading mt2">${userJourney?.todayRewards.toFixed(2)}</p>
+                                    <p className="heading mt2">${userJourney?.todayRewards?.toFixed(2)}</p>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const UserProfile = () => {
                     <div className="profile-line-break"></div>
                     <div className="user-account-balance">
                         <h3>Account Balance</h3>
-                        <h2><span className="mr8">$</span>{userWallet?.value.toFixed(2)}</h2>
+                        <h2><span className="mr8">$</span>{userWallet?.value?.toFixed(2)}</h2>
                     </div>
                 </div>
 
