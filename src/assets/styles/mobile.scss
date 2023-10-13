@@ -671,7 +671,12 @@ $color-gray-green-home-main: #F6FCF3;
 
 .slider-container {
     background-color: $color-gray-main;
+    overflow: hidden;
+}
 
+.slider{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
 }
 
 .slide {
@@ -687,6 +692,14 @@ $color-gray-green-home-main: #F6FCF3;
     background-repeat: no-repeat;
 }
 
+.slide2{
+    background-image: url(../images/redzy/landingSlider2.png);
+}
+
+.slide3{
+    background-image: url(../images/redzy/landingSlider3.png);
+}
+
 .slide>div {
     width: 90%;
     display: flex;
@@ -700,6 +713,7 @@ $color-gray-green-home-main: #F6FCF3;
     font-size: 28px;
     word-break: keep-all;
     box-sizing: border-box;
+    margin-top: 15rem;
 }
 
 .slide-secound-text {
@@ -1097,7 +1111,7 @@ $color-gray-green-home-main: #F6FCF3;
         margin-top: 2rem;
         display: flex;
         justify-content: center;
-    }
+            }
 
     .navBarBtns {
         width: 100%;
@@ -1439,3 +1453,174 @@ $color-gray-green-home-main: #F6FCF3;
 }
 
 //end start journey 
+
+@media only screen and (max-width: 768px){
+    .bottom_nav{
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: 100%;
+        transform: none;
+    }
+
+    .user-withdrawal-section{
+        .cards{
+            width: 80%;
+        }
+        .usdtAmount > span{
+            font-size: 26px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px){    
+    
+    html{
+        font-size: 0.7rem;
+    }
+
+    .bottom_nav 
+    .bottom_nav_childs 
+    .bottom_nav_logo{
+        width: 6rem;
+        height: 6rem;
+        top: -2.5rem;
+    }
+
+    .home-images-slider > div{
+        min-height: 15rem;
+        min-width: 20rem
+    }
+
+    .home-main-text > h2{
+        font-size: 26px;
+    }
+
+    .home-secound-text{
+        font-size: 26px;
+    }
+
+    .main-logo{
+        width: 150px;
+        height: 50px;
+    }
+
+    .profileLogo i{
+        font-size: 22px;
+        padding: 0.5rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .user-history-section{
+        .navBarBtns{
+            flex-wrap: wrap;
+        }
+        .navBarBtns > button{
+            font-size: 18px;
+        }    
+    }
+
+    .user-withdrawal-section {
+        .usdtAmount > span{
+            font-size: 22px;
+        }
+
+        .withdrawalBtn{
+            margin-top: 5rem;
+            font-size: 24px;
+            height: 3.5rem;
+        }
+
+        .withdrawalLogo{
+            font-size: 26px;
+        }
+
+        .accountBalance{
+            font-size: 22px;
+        }
+
+        .cards{
+            margin-top: -5rem;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 350px){    
+
+    html{
+        font-size: 0.6rem;
+    }
+
+    .home-images-slider > div{
+        min-height: 10rem;
+        min-width: 15rem
+    }
+
+    .user-history-section {
+        .historyNavBar{
+            padding: 0;
+        }
+
+        .priceInfo > div {
+            h3{
+                font-size: 18px;
+            }
+
+            span{
+                font-size: 18px;
+            }
+        } 
+    }
+
+    .user-withdrawal-section{
+        .cards{
+            width: 100%;
+            margin-top: -1rem;
+        }
+
+        .withdrawalName > input{
+            width: 100%;
+        }
+
+        .withdrawalName>input::placeholder {
+            color: #000;
+            font-size: 22px;
+            opacity: 0.6;
+        }
+
+        .switch{
+            font-size: 22px;
+        }
+    }
+
+    .journey-info{
+        flex-direction: column;
+    }
+
+    .start-journey-section .journey .journey-info div span span{
+        font-size: 14px;
+        margin-left: 0;
+    }
+    
+    .start-journey-section {
+        .journey{
+            .journey-info {
+                div{
+                   padding-left: 0.5rem;
+                   padding-top: 0.5rem;
+                   margin-top: 0rem;
+               }
+            }
+
+        } 
+
+        button{
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+    }
+}
